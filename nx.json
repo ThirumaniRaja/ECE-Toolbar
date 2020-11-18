@@ -1,0 +1,22 @@
+{
+  "npmScope": "tce-toolbar",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "toolbar": {
+      "tags": []
+    },
+    "toolbar-e2e": {
+      "tags": [],
+      "implicitDependencies": ["toolbar"]
+    }
+  }
+}

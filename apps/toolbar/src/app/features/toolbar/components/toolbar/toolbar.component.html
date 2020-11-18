@@ -1,0 +1,29 @@
+<div class="toolbar-sec">
+  <div
+    class="item "
+    [ngClass]="i === 3 || i === 5 ? 'devider' : '' "
+    *ngFor="let tools of toolsList; let i = index"
+    (click)="selectedTool(tools, i)"
+  >
+  <div *ngIf="showMenu && selctedIndex === i" class="arrow"></div>
+    <fa-icon [icon]="tools.tool"></fa-icon>
+    <div *ngIf="showMenu && selctedIndex === i" class="sub-tool">
+        hey am tool menu
+      </div>
+  </div>
+ 
+</div>
+
+<!-- <div class="toolbar-sec" *ngFor="let tools of toolsList; let i = index">
+    {{tools.tool}}
+    <button class="item"><fa-icon [icon]="tools.tool"></fa-icon></button>
+    <div class="devider"></div>
+</div> -->
+<!-- <button class="item"><fa-icon [icon]="faUnderline"></fa-icon></button>
+  
+    <div class="devider"></div>
+    <button class="item"><fa-icon [icon]="faKeyboard"></fa-icon></button>
+    <button class="item"><fa-icon [icon]="faKeyboard"></fa-icon></button>
+    <button class="item"><fa-icon [icon]="faKeyboard"></fa-icon></button> <button class="item"><fa-icon [icon]="faKeyboard"></fa-icon></button>
+    <div class="devider"></div>
+    <button class="item"><fa-icon [icon]="faEdit"></fa-icon></button> -->
