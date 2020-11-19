@@ -1,14 +1,14 @@
 <div class="toolbar-sec">
   <div
     class="item "
-    [ngClass]="i === 3 || i === 5 ? 'devider' : '' "
+    [ngClass]="i === 3 || i === 5 ? 'divider' : '' "
     *ngFor="let tools of toolsList; let i = index"
     (click)="selectedTool(tools, i)"
   >
   <div *ngIf="showMenu && selctedIndex === i" class="arrow"></div>
     <fa-icon [icon]="tools.tool"></fa-icon>
     <div *ngIf="showMenu && selctedIndex === i" class="sub-tool">
-        hey am tool menu
+        <button (click)="showData(i,tools)">show Data</button>
       </div>
   </div>
  

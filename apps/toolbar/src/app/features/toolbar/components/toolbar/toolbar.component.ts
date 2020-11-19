@@ -34,14 +34,17 @@ export class ToolbarComponent implements OnInit {
   ngOnInit(): void {}
 
   selectedTool(toolData, index) {
-    console.log(toolData, index);
     if (toolData.toolOption) {
       this.showMenu = true
       this.selctedIndex = index
-      console.log('optionAvailable');
+      
     } else {
       this.showMenu = false
-      console.log('not available');
+      
     }
+  }
+
+  showData(data,i){
+    console.log("selcted index",i,data)
   }
 }
